@@ -3,7 +3,7 @@ from pathlib import Path
 #from os import environ
 
 def getdata(url, token):
-  header = {'Cookie': f'session={token}'}
+  header = {'Cookie': f'session={token}', 'User-Agent': 'https://github.com/r0ttan/aocdata/edit/main/aocdata.py by gustobbe@gmail.com'}
   r = requests.get(url, headers=header)
   if len(r.text) > 0:
     return r.text
